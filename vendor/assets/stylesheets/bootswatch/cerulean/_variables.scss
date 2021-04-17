@@ -1,4 +1,4 @@
-// Cerulean 3.3.5
+// Cerulean 3.4.1
 // Variables
 // --------------------------------------------------
 
@@ -67,7 +67,7 @@ $line-height-computed:    floor(($font-size-base * $line-height-base)) !default;
 //** By default, this inherits from the `<body>`.
 $headings-font-family:    $font-family-base !default;
 $headings-font-weight:    500 !default;
-$headings-line-height:    1.1 !default;
+$headings-line-height:    1.2 !default;
 $headings-color:          #317EAC !default;
 
 
@@ -110,7 +110,7 @@ $component-active-color:    #fff !default;
 //** Global background color for active items (e.g., navs or dropdowns).
 $component-active-bg:       $brand-primary !default;
 
-//** Width of the `border` for generating carets that indicator dropdowns.
+//** Width of the `border` for generating carets that indicate dropdowns.
 $caret-width-base:          4px !default;
 //** Carets increase slightly in size for larger components.
 $caret-width-large:         5px !default;
@@ -387,7 +387,7 @@ $navbar-default-toggle-icon-bar-bg:        #fff !default;
 $navbar-default-toggle-border-color:       darken($navbar-default-bg, 10%) !default;
 
 
-// Inverted navbar
+//=== Inverted navbar
 // Reset inverted navbar basics
 $navbar-inverse-color:                      #fff !default;
 $navbar-inverse-bg:                         $brand-info !default;
@@ -488,6 +488,7 @@ $jumbotron-color:                inherit !default;
 $jumbotron-bg:                   $gray-lighter !default;
 $jumbotron-heading-color:        inherit !default;
 $jumbotron-font-size:            ceil(($font-size-base * 1.5)) !default;
+$jumbotron-heading-font-size:    ceil(($font-size-base * 4.5)) !default;
 
 
 //== Form states and alerts
@@ -861,5 +862,7 @@ $blockquote-border-color:     $gray-lighter !default;
 $page-header-border-color:    $gray-lighter !default;
 //** Width of horizontal description list titles
 $dl-horizontal-offset:        $component-offset-horizontal !default;
+//** Point at which .dl-horizontal becomes horizontal
+$dl-horizontal-breakpoint:    $grid-float-breakpoint !default;
 //** Horizontal line color.
 $hr-border:                   $gray-lighter !default;

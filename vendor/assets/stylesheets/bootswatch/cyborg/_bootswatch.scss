@@ -1,8 +1,13 @@
-// Cyborg 3.3.5
+// Cyborg 3.4.1
 // Bootswatch
 // -----------------------------------------------------
 
-@import url("//fonts.googleapis.com/css?family=Roboto:400,700");
+$web-font-path: "https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap";
+
+@mixin web-font($path) {
+  @import url("@{path}");
+}
+@mixin web-font($web-font-path);
 
 // Navbar =====================================================================
 
@@ -33,6 +38,13 @@
 .text-info,
 .text-info:hover {
   color: $brand-info;
+}
+
+.bg-success,
+.bg-info,
+.bg-warning,
+.bg-danger {
+  color: #fff;
 }
 
 // Tables =====================================================================
@@ -191,38 +203,38 @@ a.list-group-item {
   &.active:focus {
     border-color: $list-group-border;
   }
-}
 
-a.list-group-item-success {
-  &.active {
-    background-color: $state-success-bg;
+  a.list-group-item-success {
+    &.active {
+      background-color: $state-success-bg;
+    }
+
+    &.active:hover,
+    &.active:focus {
+      background-color: darken($state-success-bg, 5%);
+    }
   }
 
-  &.active:hover,
-  &.active:focus {
-    background-color: darken($state-success-bg, 5%);
-  }
-}
+  a.list-group-item-warning {
+    &.active {
+      background-color: $state-warning-bg;
+    }
 
-a.list-group-item-warning {
-  &.active {
-    background-color: $state-warning-bg;
-  }
-
-  &.active:hover,
-  &.active:focus {
-    background-color: darken($state-warning-bg, 5%);
-  }
-}
-
-a.list-group-item-danger {
-  &.active {
-    background-color: $state-danger-bg;
+    &.active:hover,
+    &.active:focus {
+      background-color: darken($state-warning-bg, 5%);
+    }
   }
 
-  &.active:hover,
-  &.active:focus {
-    background-color: darken($state-danger-bg, 5%);
+  a.list-group-item-danger {
+    &.active {
+      background-color: $state-danger-bg;
+    }
+
+    &.active:hover,
+    &.active:focus {
+      background-color: darken($state-danger-bg, 5%);
+    }
   }
 }
 

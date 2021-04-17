@@ -16,11 +16,15 @@ bootstrap itself.
 
 Add this line to your application's Gemfile, in assets group:
 
-    gem 'bootswatch-rails'
+```ruby
+gem 'bootswatch-rails'
+```
 
 And then execute:
 
-    $ bundle
+```zsh
+$ bundle
+```
 
 ## Usage
 
@@ -34,7 +38,7 @@ Here's approximately how your `application.css.scss` file should look like,
 considering that you're using
 [bootstrap-sass](https://github.com/thomas-mcdonald/bootstrap-sass).
 
-````sass
+```sass
 // Example using 'Cerulean' bootswatch
 
 //Import bootstrap-sprockets
@@ -54,11 +58,13 @@ body { padding-top: 60px; }
 
 // Whatever application styles you have go last
 @import "base";
-````
+```
+
 ### Overriding bootswatch variables
 
 Since version 3.1 it's possible to override variables.
-````sass
+
+```sass
 // First set or import your overrides
 $textColor: #000;
 
@@ -66,28 +72,29 @@ $textColor: #000;
 @import "bootswatch/journal/variables";
 
 // Then the rest as shown above...
-````
+```
+
 ## Bootswatches
 
 Included bootswatches
 
-* Amelia
-* [Cerulean](http://bootswatch.com/cerulean/)
-* [Cosmo](http://bootswatch.com/cosmo/)
-* [Cyborg](http://bootswatch.com/cyborg/)
-* [Darkly](http://bootswatch.com/darkly/)
-* [Flatly](http://bootswatch.com/flatly/)
-* [Journal](http://bootswatch.com/journal/)
-* [Lumen](http://bootswatch.com/lumen/)
-* [Paper](http://bootswatch.com/paper/)
-* [Readable](http://bootswatch.com/readable/)
-* [Sandstone](http://bootswatch.com/sandstone/)
-* [Simplex](http://bootswatch.com/simplex/)
-* [Slate](http://bootswatch.com/slate/)
-* [Spacelab](http://bootswatch.com/spacelab/)
-* [Superhero](http://bootswatch.com/superhero/)
-* [United](http://bootswatch.com/united/)
-* [Yeti](http://bootswatch.com/yeti/)
+- Amelia
+- [Cerulean](http://bootswatch.com/cerulean/)
+- [Cosmo](http://bootswatch.com/cosmo/)
+- [Cyborg](http://bootswatch.com/cyborg/)
+- [Darkly](http://bootswatch.com/darkly/)
+- [Flatly](http://bootswatch.com/flatly/)
+- [Journal](http://bootswatch.com/journal/)
+- [Lumen](http://bootswatch.com/lumen/)
+- [Paper](http://bootswatch.com/paper/)
+- [Readable](http://bootswatch.com/readable/)
+- [Sandstone](http://bootswatch.com/sandstone/)
+- [Simplex](http://bootswatch.com/simplex/)
+- [Slate](http://bootswatch.com/slate/)
+- [Spacelab](http://bootswatch.com/spacelab/)
+- [Superhero](http://bootswatch.com/superhero/)
+- [United](http://bootswatch.com/united/)
+- [Yeti](http://bootswatch.com/yeti/)
 
 ## Contributing
 
@@ -99,8 +106,8 @@ Included bootswatches
 
 Please see [CONTRIBUTING](https://github.com/maxim/bootswatch-rails/blob/master/CONTRIBUTING.md) for more detail. (Dont change the scss files by hand, use the converter and rearranger first, and make your changes in those if possible)
 
-
 #### Note about converter
+
 I am trying to automate this project as much as possible, so I wrote a script
 that does most of the work converting less to scss. If you want to contribute a
 fix that's easily automatable and you know ruby, please add a processor to the
@@ -110,5 +117,5 @@ converter.
 
 Big thanks to these guys.
 
-* [Thomas Park](http://github.com/thomaspark) for [bootswatch](http://bootswatch.com/)
-* [Thomas McDonald](http://github.com/thomas-mcdonald) for [bootstrap-sass](https://github.com/thomas-mcdonald/bootstrap-sass)
+- [Thomas Park](http://github.com/thomaspark) for [bootswatch](http://bootswatch.com/)
+- [Thomas McDonald](http://github.com/thomas-mcdonald) for [bootstrap-sass](https://github.com/thomas-mcdonald/bootstrap-sass)

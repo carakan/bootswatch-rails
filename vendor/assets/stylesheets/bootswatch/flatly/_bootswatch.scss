@@ -1,33 +1,38 @@
-// Flatly 3.3.5
+// Flatly 3.4.1
 // Bootswatch
 // -----------------------------------------------------
 
-@import url("//fonts.googleapis.com/css?family=Lato:400,700,400italic");
+$web-font-path: "https://fonts.googleapis.com/css?family=Lato:400,700,400italic&display=swap";
+
+@mixin web-font($path) {
+  @import url("@{path}");
+}
+@mixin web-font($web-font-path);
 
 // Navbar =====================================================================
 
 .navbar {
   border-width: 0;
-}
 
-.navbar-default {
+  .navbar-default {
 
-  .badge {
-    background-color: #fff;
-    color: $navbar-default-bg;
+    .badge {
+      background-color: #fff;
+      color: $navbar-default-bg;
+    }
   }
-}
 
-.navbar-inverse {
+  .navbar-inverse {
 
-  .badge {
-    background-color: #fff;
-    color: $navbar-inverse-bg;
+    .badge {
+      background-color: #fff;
+      color: $navbar-inverse-bg;
+    }
   }
-}
 
-.navbar-brand {
-  line-height: 1;
+  .navbar-brand {
+    line-height: 1;
+  }
 }
 
 // Buttons ====================================================================
@@ -106,21 +111,20 @@ table,
     border: none;
   }
 
-}
-
-.table-bordered > thead > tr > th,
-.table-bordered > tbody > tr > th,
-.table-bordered > tfoot > tr > th,
-.table-bordered > thead > tr > td,
-.table-bordered > tbody > tr > td,
-.table-bordered > tfoot > tr > td {
-  border: 1px solid $table-border-color;
+  .table-bordered > thead > tr > th,
+  .table-bordered > tbody > tr > th,
+  .table-bordered > tfoot > tr > th,
+  .table-bordered > thead > tr > td,
+  .table-bordered > tbody > tr > td,
+  .table-bordered > tfoot > tr > td {
+    border: 1px solid $table-border-color;
+  }
 }
 
 // Forms ======================================================================
 
 .form-control,
-input, {
+input {
   border-width: 2px;
   @include box-shadow(none);
 
@@ -276,44 +280,46 @@ a.list-group-item {
   &.active:focus {
     border-color: $list-group-border;
   }
+
+  a.list-group-item-success {
+    &.active {
+      background-color: $state-success-bg;
+    }
+
+    &.active:hover,
+    &.active:focus {
+      background-color: darken($state-success-bg, 5%);
+    }
+  }
+
+  a.list-group-item-warning {
+    &.active {
+      background-color: $state-warning-bg;
+    }
+
+    &.active:hover,
+    &.active:focus {
+      background-color: darken($state-warning-bg, 5%);
+    }
+  }
+
+  a.list-group-item-danger {
+    &.active {
+      background-color: $state-danger-bg;
+    }
+
+    &.active:hover,
+    &.active:focus {
+      background-color: darken($state-danger-bg, 5%);
+    }
+  }
 }
 
-a.list-group-item-success {
-  &.active {
-    background-color: $state-success-bg;
-  }
-
-  &.active:hover,
-  &.active:focus {
-    background-color: darken($state-success-bg, 5%);
-  }
-}
-
-a.list-group-item-warning {
-  &.active {
-    background-color: $state-warning-bg;
-  }
-
-  &.active:hover,
-  &.active:focus {
-    background-color: darken($state-warning-bg, 5%);
-  }
-}
-
-a.list-group-item-danger {
-  &.active {
-    background-color: $state-danger-bg;
-  }
-
-  &.active:hover,
-  &.active:focus {
-    background-color: darken($state-danger-bg, 5%);
-  }
-}
-
-.panel-default {
-  .close {
-    color: $text-color;
+.panel {
+  .panel-default {
+    .close {
+      color: $text-color;
+    }
   }
 }
 

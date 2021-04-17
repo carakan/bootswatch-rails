@@ -1,4 +1,4 @@
-// Yeti 3.3.5
+// Yeti 3.4.1
 // Variables
 // --------------------------------------------------
 
@@ -110,7 +110,7 @@ $component-active-color:    #fff !default;
 //** Global background color for active items (e.g., navs or dropdowns).
 $component-active-bg:       $brand-primary !default;
 
-//** Width of the `border` for generating carets that indicator dropdowns.
+//** Width of the `border` for generating carets that indicate dropdowns.
 $caret-width-base:          4px !default;
 //** Carets increase slightly in size for larger components.
 $caret-width-large:         5px !default;
@@ -490,6 +490,7 @@ $jumbotron-heading-color:        inherit !default;
 $jumbotron-font-size:            ceil(($font-size-base * 1.5)) !default;
 $jumbotron-heading-font-size:    ceil(($font-size-base * 4.5)) !default;
 
+
 //== Form states and alerts
 //
 //## Define colors for form feedback states and, by default, alerts.
@@ -861,5 +862,7 @@ $blockquote-border-color:     $table-border-color !default;
 $page-header-border-color:    $table-border-color !default;
 //** Width of horizontal description list titles
 $dl-horizontal-offset:        $component-offset-horizontal !default;
+//** Point at which .dl-horizontal becomes horizontal
+$dl-horizontal-breakpoint:    $grid-float-breakpoint !default;
 //** Horizontal line color.
 $hr-border:                   $table-border-color !default;
